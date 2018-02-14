@@ -32,7 +32,7 @@ Implementation and Results are as follows.
 
 This example is result of `regression` with [Concrete dataset](https://archive.ics.uci.edu/ml/datasets/Concrete+Compressive+Strength). The data which is used for this example is as follows.
 
-<img src="./image/Concrete_dataset.PNG" width="600" alt="Concrete dataset" />
+<img src="./image/Concrete_dataset.PNG" width="600" alt="Concrete Dataset" />
 
 
 
@@ -54,13 +54,13 @@ It has 1030 data and it has 9 component. The `information of the components` are
 
 **Result of regression** is as follows. 
 
-<img src="./image/result_real1.png" width="500" alt="Concrete dataset" />
+<img src="./image/result_real1.png" width="500" alt="Regression Result1" />
 
 Result predicts ground truth quite well. Also, if there is difference between prediction and ground truth,  ground truth exists between the uncertainty of the prediction.
 
 
 
-<img src="./image/result_real2.png" width="500" alt="Concrete dataset" />
+<img src="./image/result_real2.png" width="500" alt="Regression Result2" />
 
 Also, I used random numbers as `unknown input` of this algorithm and compare this unknown data with known data. As you can see, standard deviation of known data is much smaller than standard deviation of unknown data.  This result shows that this algorithm is not overconfident when unknown dataset is used!:smile:
 
@@ -84,6 +84,6 @@ This is the `result of known data` (MNIST dataset). In this case, both ensemble 
 
 
 
-![Classification_result_NotMNIST](C:\Users\Q\Dropbox\PythonProject\Project\Git\Ensemble\image\Classification_result_NotMNIST.PNG)
+![Classification_result_NotMNIST](./image/Classification_result_NotMNIST.PNG)
 
 This is the `result of unknown data` (NotMNIST dataset). In this case, there is big difference between ensemble network and single network. `Single network` is overconfident, even though the class of data is unknown!! However,  `Ensemble` result has lower confidence when the class is unknown!! This result shows that using ensemble for estimating predictive uncertainty is better for solving overconfident prediction problem than single network!! :clap:
