@@ -18,23 +18,37 @@ This paper uses 3 things for training
 
 This repository implemented without Adversarial training
 
-
+The versions of deep learning libraries for this repo are as follows
+- tensorflow: 2.9.1
+- pytorch: 1.9.1
 
 Implementation and Results are as follows.
 
 
 
 ## Implementation
+### Regression (Toy data)
+This example is result of `regression` with toy data which has simple sine data with noise.
+The data for this example is as follows.
+<img src="./image/ToyData.png" width="300" alt="toy dataset" />
+
+**Result of regression (toy data)** is as follows. 
+
+<img src="./image/ToyResult.png" width="300" alt="Regression Toy Result1" />
+
+The standard deviation is predicted appropriately according to the noise of the data. 
+Also, the standard deviation increases for the out-of-distribution data. 
+
+<img src="./image/ToyResult_Ensemble_Single.png" width="300" alt="Regression Toy Result1" />
+
+The toy data is used for evaluating result for the performance between single network and ensemble network. 
+As the above graph shows, the estimation of uncertainty is poor when using a single network. 
 
 ### Regression (Real data)
-
-
 
 This example is result of `regression` with [Concrete dataset](https://archive.ics.uci.edu/ml/datasets/Concrete+Compressive+Strength). The data which is used for this example is as follows.
 
 <img src="./image/Concrete_dataset.PNG" width="600" alt="Concrete Dataset" />
-
-
 
 It has 1030 data and it has 9 component. The `information of the components` are as follows. 
 
@@ -52,13 +66,11 @@ It has 1030 data and it has 9 component. The `information of the components` are
 
 
 
-**Result of regression** is as follows. 
+**Result of regression (real data)** is as follows. 
 
 <img src="./image/result_real1.png" width="500" alt="Regression Result1" />
 
 Result predicts ground truth quite well. Also, if there is difference between prediction and ground truth,  ground truth exists between the uncertainty of the prediction.
-
-
 
 <img src="./image/result_real2.png" width="500" alt="Regression Result2" />
 
