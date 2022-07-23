@@ -30,6 +30,7 @@ Implementation and Results are as follows.
 ### Regression (Toy data)
 This example is result of `regression` with toy data which has simple sine data with noise.
 The data for this example is as follows.
+
 <img src="./image/ToyData.png" width="300" alt="toy dataset" />
 
 **Result of regression (toy data)** is as follows. 
